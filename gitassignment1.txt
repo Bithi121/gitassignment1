@@ -1,0 +1,190 @@
+
+bittaluk@INLEN8520055214 MINGW64 ~ (css-assignments)
+$ cd assignments
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master)
+$ git branch css-assignments
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master)
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (css-assignments)
+$ git add .
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (css-assignments)
+$ git commit -m "commited"
+[css-assignments f61717b] commited
+ Committer: Talukder <bithi.talukder@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 28 insertions(+)
+ create mode 100644 css.html
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (css-assignments)
+$ git add .
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (css-assignments)
+$ git commit -m "commited1"
+[css-assignments b5ae168] commited1
+ Committer: Talukder <bithi.talukder@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master)
+$ git add .
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master)
+$ git commit -m "commited2"
+[master b06dfb8] commited2
+ Committer: Talukder <bithi.talukder@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master)
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (css-assignments)
+$ git add .
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (css-assignments)
+$ git commit -m "commited3"
+[css-assignments fefedcf] commited3
+ Committer: Talukder <bithi.talukder@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master)
+$ git merge css-assignments
+Auto-merging Readme.txt.txt
+CONFLICT (content): Merge conflict in Readme.txt.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master|MERGING)
+$ cat readme.txt
+cat: readme.txt: No such file or directory
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master|MERGING)
+$ cat Readme.txt
+cat: Readme.txt: No such file or directory
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master|MERGING)
+$ cat Readme.txt.txt
+<<<<<<< HEAD
+hello,how are you?I am good,hi,hello
+=======
+hello,how are you?I am good.hi,bye bye
+>>>>>>> css-assignments
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master|MERGING)
+$ git merge css-assignments
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master|MERGING)
+$ ^[[200~git commit -m "merged and resolved the conflict in Readme.txt"
+bash: $'\E[200~git': command not found
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master|MERGING)
+$ git commit -m "merged and resolved the conflict in Readme.txt"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       Readme.txt.txt
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master|MERGING)
+$ git commit -m "merged and resolved the conflict in Readme.txt.txt"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       Readme.txt.txt
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master|MERGING)
+$ git commit -m "merged and resolved the conflict in Readme.txt.txt"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       Readme.txt.txt
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master|MERGING)
+$ git add .
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master|MERGING)
+$ git commit -m "merged and resolved the conflict in Readme.txt.txt"
+[master 7b0e0cf] merged and resolved the conflict in Readme.txt.txt
+ Committer: Talukder <bithi.talukder@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master)
+$ git merge css-assignments
+Already up to date.
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master)
+$ git branch -d css-assignments
+Deleted branch css-assignments (was fefedcf).
+
+bittaluk@INLEN8520055214 MINGW64 ~/assignments (master)
+$
